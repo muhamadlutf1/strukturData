@@ -1,0 +1,31 @@
+package com.mycompany.tugas_strukturdata3;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+public class Tugas_strukturData3 {
+
+    public static void main(String[] args) {
+        int[] array1 = {7, 8, 9,};
+        int[] array2 = {7, 9, 10, 11};
+        
+        // Menggunakan Set untuk menyimpan elemen yang sama
+        Set<Integer> set1 = new HashSet<>();
+        for (int num : array1) {
+            set1.add(num);
+        }
+        
+        List<Integer> commonElements = new ArrayList<>();
+        
+        // Memeriksa elemen di array kedua
+        for (int num : array2) {
+            if (set1.contains(num)) {
+                commonElements.add(num);
+            }
+        }
+        
+        // Menampilkan hasil
+        System.out.println(commonElements);
+    }
+}
